@@ -1,15 +1,15 @@
+require('dotenv').config();
 const tmi = require('tmi.js');
-const keys = require('./keys.env');
 const cmds = require('./chatcmds.js');
 
 // Define configuration options
 const opts = {
   identity: {
-    username: keys.BOT_USERNAME,
-    password: keys.OAUTH_TOKEN
+    username: process.env.BOT_USERNAME,
+    password: process.env.OAUTH_TOKEN
   },
   channels: [
-    keys.CHANNEL_NAME
+    process.env.CHANNEL_NAME
   ]
 };
 
